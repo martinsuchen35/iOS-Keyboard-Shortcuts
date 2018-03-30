@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uxa-zR-h3d">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--WKWebView1-->
+        <scene sceneID="yPt-NT-YDt">
+            <objects>
+                <viewController id="kkl-fA-Sv4" customClass="ViewControllerWKWebView1" customModule="iOS_Keyboard_Shortcuts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NhO-5U-25p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Wsl-e9-ly7"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="WKWebView1" id="ZHf-o0-m1G"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="25U-5k-BeF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="988" y="219"/>
+        </scene>
+        <!--WKWebView2-->
+        <scene sceneID="PlY-if-Vx5">
+            <objects>
+                <viewController id="GY4-iB-tnd" customClass="ViewControllerWKWebView2" customModule="iOS_Keyboard_Shortcuts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5vr-M8-HcL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="7Qu-Wq-sS6"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="WKWebView2" id="Czl-3z-Q8y"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZGp-Ag-nZZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="988" y="1177"/>
+        </scene>
+        <!--TextField-->
+        <scene sceneID="jwW-nd-bM7">
+            <objects>
+                <viewController id="eWU-xF-FJc" customClass="ViewControllerTextField" customModule="iOS_Keyboard_Shortcuts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="glH-rU-Dj7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H1P-TZ-35G">
+                                <rect key="frame" x="30" y="50" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textField:" destination="AKe-pl-dua" eventType="editingDidEnd" id="qem-8G-buD"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MGE-bR-cCr" firstAttribute="trailing" secondItem="H1P-TZ-35G" secondAttribute="trailing" constant="30" id="JDh-NX-frh"/>
+                            <constraint firstItem="H1P-TZ-35G" firstAttribute="top" secondItem="MGE-bR-cCr" secondAttribute="top" constant="30" id="PHl-Jp-FGy"/>
+                            <constraint firstItem="H1P-TZ-35G" firstAttribute="centerX" secondItem="glH-rU-Dj7" secondAttribute="centerX" id="UzD-nw-O5Q"/>
+                            <constraint firstItem="H1P-TZ-35G" firstAttribute="leading" secondItem="MGE-bR-cCr" secondAttribute="leading" constant="30" id="dbt-Ve-E8i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MGE-bR-cCr"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="TextField" id="iTM-9U-mFu"/>
+                    <connections>
+                        <outlet property="textField" destination="H1P-TZ-35G" id="Ooq-MP-j1e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wwB-2u-VVK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="AKe-pl-dua" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="988" y="-445"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="wWF-x9-4k3">
+            <objects>
+                <tabBarController id="Uxa-zR-h3d" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zpu-Hr-gKF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="eWU-xF-FJc" kind="relationship" relationship="viewControllers" id="eXM-t0-gdR"/>
+                        <segue destination="kkl-fA-Sv4" kind="relationship" relationship="viewControllers" id="XJe-Dd-yVV"/>
+                        <segue destination="GY4-iB-tnd" kind="relationship" relationship="viewControllers" id="bMS-8q-eMK"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sGn-A5-CuX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34" y="-112"/>
+        </scene>
+    </scenes>
+</document>
