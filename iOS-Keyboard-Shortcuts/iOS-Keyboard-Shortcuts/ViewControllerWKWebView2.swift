@@ -14,14 +14,17 @@ class ViewControllerWKWebView2: UIViewController, WKUIDelegate {
     var webView: WKWebView!
     var contentView: UIView!
     
+    override func loadView() {
+        setupWebViewConfig()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupWebViewConfig()
-        loadExampleHtmlInWebView()
-        configKeyboardShortcuts()
 
         findContentView()
+        loadExampleHtmlInWebView()
+
+        configKeyboardShortcutsSpecial()
         NotificationCenter.default.addObserver(self, selector: #selector(configKeyboardShortcutsSpecial), name: .UIKeyboardDidShow, object: nil)
     }
     
@@ -46,14 +49,6 @@ class ViewControllerWKWebView2: UIViewController, WKUIDelegate {
         let url = URL(fileURLWithPath: path!)
         let request = URLRequest(url: url)
         webView.load(request)
-    }
-
-    func configKeyboardShortcuts() {
-        webView.inputAssistantItem.leadingBarButtonGroups = []
-        webView.inputAssistantItem.trailingBarButtonGroups = []
-        
-        webView.inputAssistantItem.leadingBarButtonGroups.append(generateLeadingBarButtonGroup())
-        webView.inputAssistantItem.trailingBarButtonGroups.append(generateTrailingBarButtonGroup())
     }
 
     @objc func configKeyboardShortcutsSpecial() {
